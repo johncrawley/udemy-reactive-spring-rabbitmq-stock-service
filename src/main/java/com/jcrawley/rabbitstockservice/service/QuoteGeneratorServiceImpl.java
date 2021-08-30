@@ -1,4 +1,4 @@
-package com.jcrawley.reactiverabbitmqstockservice.service;
+package com.jcrawley.rabbitstockservice.service;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -11,7 +11,7 @@ import java.util.function.BiFunction;
 
 import org.springframework.stereotype.Service;
 
-import com.jcrawley.reactiverabbitmqstockservice.model.Quote;
+import com.jcrawley.rabbitstockservice.model.Quote;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.SynchronousSink;

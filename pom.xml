@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jcrawley</groupId>
-	<artifactId>udemy-reactive-spring-rabbitmq-stock-service</artifactId>
+	<artifactId>rabbit-stock-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>udemy-reactive-spring-rabbitmq-stock-service</name>
 	<description>From John Thompson&apos;s Reactive Spring course on Udemy</description>

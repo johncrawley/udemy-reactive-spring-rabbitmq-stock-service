@@ -1,4 +1,4 @@
-package com.jcrawley.reactiverabbitmqstockservice.model;
+package com.jcrawley.rabbitstockservice.model;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
