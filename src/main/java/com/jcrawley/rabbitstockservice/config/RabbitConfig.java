@@ -8,9 +8,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.Delivery;
 
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.rabbitmq.RabbitFlux;
+import reactor.rabbitmq.Receiver;
+import reactor.rabbitmq.ReceiverOptions;
 import reactor.rabbitmq.Sender;
 import reactor.rabbitmq.SenderOptions;
 
@@ -36,4 +40,17 @@ public class RabbitConfig {
 	Sender sender(Mono<Connection> mono) {
 		return RabbitFlux.createSender(new SenderOptions().connectionMono(mono));
 	}
+
+	
+	@Bean
+	Receiver receiver(Mono<Connection> mono) {
+		return RabbitFlux.createReceiver(new ReceiverOptions().connectionMono(mono));	
+	}
+	
+	/*
+	@Bean
+	Flux<Delivery> deliveryFlux(Receiver receiver){
+		return receiver.consumeAutoAck(QUEUE);
+	}
+	*/
 }
